@@ -6,8 +6,8 @@ CommonTpl.detectLanguage();
 /* eslint-disable-next-line */
 const LANG = CommonTpl.LANG;
 const DATA = data[LANG];
+// eslint-disable-next-line no-console
 console.info(`LANG: ${LANG}`);
-
 
 export const HTMLbody = /* html */ `
     <main role="main" class="homepage">

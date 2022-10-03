@@ -11,10 +11,12 @@ export class CommonTpl {
   static setData(data) {
     this.data = data;
   }
-  static setLanguage(language) {
-    this.language = language;
+
+  static setLanguage(_language) {
+    this.language = _language || language;
     this.LANG = this.language.lang;
   }
+
   static detectLanguage() {
     const { pathname } = document.location;
     const regExpAnalyzeUrl = /(\/?)(?<lang>[\w_-]*)\//;
@@ -26,7 +28,7 @@ export class CommonTpl {
   }
 
   static titleTpl(header) {
-    return /*html*/`
+    return /* html */`
       <header>
         <h1>${header.title}</h1>
         <img src="${header.img}" />
