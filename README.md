@@ -1,6 +1,6 @@
-# LiNuxt Site
+# Witux Web Demo
 
-LiNuxt es una herramienta para generar sites estáticos y su entorno de desarrollo utilizando los estándares HTML5, CSS, ES6+ y Web components usando la libreria LitElement.
+Witux es una herramienta para generar sites estáticos y su entorno de desarrollo utilizando los estándares HTML5, CSS, ES6+ y Web components.
 El proyecto, una vez terminadas las tareas de construcción (build) genera páginas web estáticas con enlaces a ficheros js y css que se guardan en la carpeta `dist`.
 
 **A destacar**
@@ -26,7 +26,6 @@ El proyecto consta de la siguiente estructura de carpetas:
 
 ```
   |__ dist (si se ha generado la build)
-  |__ recursos
   |__ src
   |   |__assets
   |   |__components
@@ -35,10 +34,10 @@ El proyecto consta de la siguiente estructura de carpetas:
   |       |__ main.css
   |   |__js
   |   |   |__lib
+  |   |       |__ common.js
+  |   |       |__ languages.js
   |   |   |__pages
   |   |       |__ index.html.mjs
-  |   |   |__tpl
-  |   |       |__ index.tpl.js
   |   |__json
   |__ index.html
 ```
@@ -67,20 +66,20 @@ El código fuente se organiza en la carpeta `src`. Dentro de esta, existen difer
 
 ## Generar scafolding de una nueva página
 
-Para generar una nueva página en blanco se ejecuta el comando **create-page** de `linuxt`
+Para generar una nueva página en blanco se ejecuta el comando **create-page** de `witux`
 
 ```
-$ linuxt create-page HTML-PAGE-NAME
+$ witux create-page HTML-PAGE-NAME
 ```
 
 Esto genera el scafolding completo de una páginas por idioma, con todos los ficheros necesarios para su correcto funcionamiento.
 
 ## Generar scafolding de un nuevo componente
 
-Para generar un nuevo web-component al que añadir la maquetación y funcionalidad se ejecuta el comando generate-wc de `linuxt`
+Para generar un nuevo web-component al que añadir la maquetación y funcionalidad se ejecuta el comando generate-wc de `witux`
 
 ```
-$ linuxt generate-wc WEB-COMPONENT-NAME
+$ witux generate-wc WEB-COMPONENT-NAME
 ```
 
 Esto genera el scafolding completo de un web-component, con sus tareas de construcción y carpetas de demo y test, para que posteriormente si se desea, se pueda publicar en un cátalogo de componentes
